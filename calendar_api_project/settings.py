@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 3rd Party
-
+    'rest_framework',
     # local
     'tasks.apps.TasksConfig',
 ]
@@ -122,3 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERSMISSION_CLASSES' : [
+            'rest_framework.permissions.AllowAny',
+    ]
+
+}
