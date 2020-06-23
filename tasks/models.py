@@ -18,6 +18,8 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
     message = models.TextField()
 
+    REQUIRED_FIELDS = [ 'title', 'event_date' ]
+
     class Meta:
         ordering = ['event_date']
 
