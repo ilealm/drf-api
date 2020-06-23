@@ -18,5 +18,8 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
     message = models.TextField()
 
+    class Meta:
+        ordering = ['event_date']
+
     def __str__(self):
         return self.title
